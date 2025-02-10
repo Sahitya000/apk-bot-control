@@ -1,0 +1,7 @@
+{
+    "welcome_message": "👋 Welcome to the APK Bot! Sirf channel subscribers ko hi links milenge.",
+    "subscribe_message": "❌ Pehle channel join karo fir /start likho:\nhttps://t.me/YOUR_CHANNEL_LINK",
+    "apk_list_message": "📌 Yeh APKs available hain:",
+    "no_links_message": "⚠️ Abhi koi APK link available nahi hai.",
+    "error_message": "❌ Koi error aayi hai. Thodi der baad try karo."
+}
