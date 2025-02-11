@@ -11,7 +11,7 @@ CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")  
 
 bot = telebot.TeleBot(TOKEN)
-server = Flask(__name__)
+server = Flask(__name__)  # Flask server instance
 
 # GitHub JSON URLs
 LINKS_URL = "https://raw.githubusercontent.com/Sahitya000/apk-bot-control/main/links.json"
@@ -61,10 +61,13 @@ def receive_update():
     bot.process_new_updates([update])
     return "OK", 200
 
-# Start bot
+# Webhook setup
+@server.route("/")
+def index():
+    return "Bot is running!", 200
+
 if __name__ == "__main__":
     bot.remove_webhook()
     time.sleep(1)
     bot.set_webhook(url=WEBHOOK_URL)  
-
-    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))  
+    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
