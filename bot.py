@@ -28,7 +28,7 @@ def start_polling():
 if __name__ == "__main__":
     bot.remove_webhook()
     time.sleep(1)  # Wait before setting webhook
-    bot.set_webhook(url=f"https://telegram-apk-bot.onrender.com")  # Replace with your Render URL
+    bot.set_webhook(url=f"https://telegram-apk-bot.onrender.com/7770495311:AAGNqugyhBStza5wnBj95GRbFnAxaNNY9X0")  # Replace with your Render URL
     server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
     # Polling fallback
