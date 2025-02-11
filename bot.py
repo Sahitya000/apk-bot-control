@@ -76,7 +76,8 @@ def start_polling():
 if __name__ == "__main__":
     bot.remove_webhook()
     time.sleep(1)
-    bot.set_webhook(url=f"{WEBHOOK_URL}/{TOKEN}")  # Secure webhook URL
+    bot.set_webhook(url="https://telegram-apk-bot.onrender.com/7770495311:AAHlOHH3O2ie1nK6YUi7ZNBWIZwYHJ2533Y")
+ # Secure webhook URL
 
     server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
